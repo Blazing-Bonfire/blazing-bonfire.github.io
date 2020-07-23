@@ -4,9 +4,25 @@ You can use the [editor on GitHub](https://github.com/Blazing-Bonfire/blazing-bo
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Why isn't this getting rendered?
+### 现在没啥内容
 
 可能放点Leetcode题解吧
+
+#### 欧拉筛法
+```C++
+int n, cnt = 0;
+int* primes = new int[n+1];  // 所有素数，升序
+bool* vis = new vis[n+1];    // 记录非素数
+memset(vis, false, sizeof(bool) * (n+1));
+memset(primes, 0, sizeof(int) * (n+1));
+for (int i = 2; i <= n; ++i) {
+    if (!vis[i]) primes[cnt++] = i;
+    for (int j = 0; j < cnt && i * primes[j] <= n; ++j) {
+        vis[i * primes[j]] = true;    // 倍数记为非素数
+        if (i % prime[j] == 0) break; // 关键，与Eratosthenes不同
+    }
+}
+```
 
 ### Markdown
 
