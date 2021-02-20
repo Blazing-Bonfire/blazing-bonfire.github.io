@@ -20,6 +20,8 @@ This post is used for testing tag plugins. See [docs](http://zespia.tw/hexo/docs
 
 This is a inline code block: `python`, `print 'helloworld'`.
 
+<!-- more -->
+
 ### Normal code block
 
 ```
